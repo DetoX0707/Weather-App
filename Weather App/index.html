@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Tempest</title>
+  </head>
+  <body>
+    <header class="home">
+      <form onsubmit="btnEvent(event)" class="search">
+        <input
+          type="text"
+          name="location"
+          class="search-bar"
+          placeholder="Enter a Location............."
+        />
+        <button type="submit" class="search-button">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </form>
+      <a href="#" onclick="home()" class="site-name"
+        >Tempest
+        <img src="/android-chrome-192x192.png" id="img" />
+      </a>
+    </header>
+    <div class="weather-app">
+      <div class="up-bar">
+        <div class="temperature">
+          <div class="image"><img alt="whether" id="weatherIcon" /></div>
+          <div class="degree">
+            <span><span id="temp"></span>°C</span>
+            <div class="description"><span id="desc"></span></div>
+          </div>
+        </div>
+        <div class="location">
+          <h1 class="location-name">
+            <span id="city"></span><br /><span id="country"></span>
+          </h1>
+          <div class="location-date"><span id="date"></span></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="others">
+          <div class="other-item">Pressure: <span id="press"></span>"Hg</div>
+          <div class="other-item">
+            Precipitation: <span id="precip"></span>mm
+          </div>
+          <div class="other-item">Humidity: <span id="humid"></span>%</div>
+          <div class="other-item">Wind: <span id="wind"></span>Kph</div>
+        </div>
+      </div>
+    </div>
+    <div class="error">
+      <h1 class="error-message">Error!!!! Code: <span id="errCode"></span></h1>
+      <h2 class="error-message">
+        <span id="errMessage"></span>
+      </h2>
+    </div>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
